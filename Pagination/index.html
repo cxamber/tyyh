@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新闻展示</title>
+    <script src="https://dn-amber-js.qbox.me/jquery-2.1.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $inf_lfet = $(".info-left");
+            $inf_lfet.mouseover(function () {
+                $(this).find("div").css({
+                    'height': '40px'
+                });
+            }).mouseout(function () {
+                $(this).find('div').css({
+                    'height': '0px'
+                });
+            });
+            /*上一版*/
+            $("#pre").click(function () {
+                if($(".info").first().hasClass("info-active")==false){
+                    var $pre=$(".info-active");
+                    $pre.prev(".info").addClass("info-active");
+                    $pre.removeClass("info-active");
+                }
+            });
+            /*下一版*/
+            $("#next").click(function () {
+                if($(".info").last().hasClass("info-active")==false) {
+                    var $nex = $(".info-active");
+                    $nex.next(".info").addClass("info-active");
+                    $nex.removeClass("info-active");
+                }
+            });
+        });
+    </script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .news-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .news-title > li {
+            list-style: none;
+            line-height: 40px;
+            font-size: 26px;
+            padding-top: 20px;
+        }
+
+        .news-title > li > a:hover {
+            color: red;
+        }
+
+        .info-left {
+            cursor: pointer;
+            width: 600px;
+            height: 800px;
+            position: absolute;
+            z-index: 1;
+        }
+        .info-active{
+            display: block!important;
+        }
+        .info{
+            display: none;
+        }
+        .info-left > div {
+
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            line-height: 40px;
+            overflow: hidden;
+        }
+
+        .info-left > div > a {
+
+            height: 0px;
+        }
+
+        .new-text {
+
+            width: 600px;
+            height: 800px;
+            left: 620px;
+            display: inline;
+            position: absolute;
+            z-index: 2;
+        }
+        .a-hover>a{
+            padding: 5px;
+            background: black;
+            color: white;
+            opacity: 0.8;
+        }
+        .a-hover>a:hover{
+            color: blue;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<div class="news-container">
+    <div style="height:50px;line-height: 50px;">
+        <a href="#" id="pre">上一版</a>
+        <a href="#" id="next">下一版</a>
+    </div>
+    <div class="info " >
+        <div class="info-left">
+            <div class="a-hover">
+                <a href="#">悬浮标签</a>
+                <a href="#">悬浮标签2</a>
+                <a href="#">悬浮标签3</a>
+                <a href="#">悬浮标签4</a>
+            </div>
+            <img src="new1.png" class="news-img">
+        </div>
+        <div class="new-text">
+            <ul class="news-title">
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="info " >
+        <div class="info-left">
+            <div class="a-hover">
+                <a href="#">悬浮标签</a>
+                <a href="#">悬浮标签2</a>
+                <a href="#">悬浮标签3</a>
+                <a href="#">悬浮标签4</a>
+            </div>
+            <img src="new1.png" class="news-img">
+        </div>
+        <div class="new-text">
+            <ul class="news-title">
+                <li>
+                    <a href="#">文章标题文章222222</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="info info-active" >
+        <div class="info-left">
+            <div class="a-hover">
+                <a href="#">悬浮标签</a>
+                <a href="#">悬浮标签2</a>
+                <a href="#">悬浮标签3</a>
+                <a href="#">悬浮标签4</a>
+            </div>
+            <img src="new1.png" class="news-img">
+        </div>
+        <div class="new-text">
+            <ul class="news-title">
+                <li>
+                    <a href="#">文章标题文章3333</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="info ">
+        <div class="info-left">
+            <div class="a-hover">
+                <a href="#">悬浮标签111</a>
+                <a href="#">悬浮标签2</a>
+                <a href="#">悬浮标签3</a>
+                <a href="#">悬浮标签4</a>
+            </div>
+            <img src="new1.png" class="news-img">
+        </div>
+        <div class="new-text">
+            <ul class="news-title">
+                <li>
+                    <a href="#">文章标题123文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题123文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题123文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+                <li>
+                    <a href="#">文章标题文章</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
